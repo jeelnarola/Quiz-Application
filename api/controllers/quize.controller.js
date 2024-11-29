@@ -41,4 +41,19 @@ const SubmitQuize = async(req,res)=>{
         res.status(500).json({message:"Internal Error :- ",error})
     }
 }
-module.exports = {CreateQuize,QuizeById}
+
+const CreateShow = async(req,res) =>{
+    try {
+        let Data = await Quize.find()
+
+        if(!Data){
+            return res.status(400).json({ message: "No Data Found..." });
+        }
+        res.status(201).json({ Data: Data});
+        
+    } catch (error) {
+        console.log("Error in CreateShow Controller :- ",error.message)
+        res.status(500).json({message:"Internal Error :- ",error})
+    }
+}
+module.exports = {CreateQuize,QuizeById,CreateShow}
