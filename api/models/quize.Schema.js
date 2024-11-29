@@ -14,7 +14,13 @@ const QuizeSchema = new mongoose.Schema({
         ],
         "explanation": "String"
       }
-    ]
+    ],
+    "detailedResults":[{
+      "questionText":String,
+      "correct":Boolean,
+      "UserAns":String,
+      "correctAnswer":String
+    }]
 })
 
 const Quize = mongoose.model('Quize',QuizeSchema)
