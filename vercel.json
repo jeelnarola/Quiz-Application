@@ -8,13 +8,9 @@
     },
     "routes": [
       {
-        "src":"/quize/(.*)",
-        "dest":"/api/server.js"
-    },
-    {
-        "src":"/user/(.*)",
-        "dest":"/api/server.js"
-    }
+        "src": "/(.*)",
+        "dest": "/api/server.js"
+      }
     ]
   }
   
