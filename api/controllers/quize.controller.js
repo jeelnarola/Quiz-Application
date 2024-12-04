@@ -39,7 +39,6 @@ const SubmitQuize = async(req,res)=>{
         const { quizId, answers } = req.body;
 
         let QuizeFind = await Quize.findById(quizId)
-        console.log("newSubmission",QuizeFind)
         if(!QuizeFind){
             return res.status(400).json({ message: "No Quize Found..." });
         }
