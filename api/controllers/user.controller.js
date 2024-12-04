@@ -35,7 +35,7 @@ const Register = async(req,res)=>{
         }})
     } catch (error) {
         console.log("Error in Register Controller :- ",error.message)
-        res.status(500).json({message:"Internal Error :- ",error})
+        res.status(500).json({message:"Internal Error Register:- ",error})
     }
 }
 
